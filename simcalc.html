@@ -4,180 +4,44 @@
         <!--Page title-->
         <title>Addition</title>
 
-        <style>
-            /*Box sizing*/
-            *{
-                box-sizing: border-box;
-            }
-
-            /*Page design*/
-            body{
-                margin: 0;
-                padding: 40px 20px;
-                background: linear-gradient(lightblue);
-                font-family: Arial, Helvetica, sans-serif;
-                min-height: 100vh;
-            }
-
-            /*Main heading*/
-            .head{
-                color: black;
-                margin: 35px;
-                font-size: 40px;
-                text-align: center;
-            }
-
-            /*Card heading*/
-            h1{
-                color: #333;
-                font-size: 24px;
-                margin-bottom: 25px;
-            }
-
-            /*Calculator grid*/
-            .container{
-                max-width: 900px;
-                margin: auto;
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                gap: 20px;
-            }
-
-            /*Calculator card*/
-            .calculating{
-                background-color: white;
-                padding: 30px;
-                border-radius: 20px;
-                box-shadow: 0 15px 20px rgba(0,0,0,0.2);
-            }
-
-            /*Card hover effect*/
-            .calculating:hover{
-                transform: translateY(-5px);
-                box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-            }
-
-            /*Paragraph text*/
-            p{
-                color: #555;
-                font-size: 16px;
-            }
-
-            /*Input boxes*/
-            input{
-                width: 100%;
-                border: 2px solid #ddd;
-                padding: 12px;
-                margin-top: 8px;
-                outline: none;
-                border-radius: 10px;
-                font-size: 16px;
-                transition: 0.5s;
-            }
-
-            /*Input hover effect*/
-            input:hover{
-                border-color: #6676ee;
-                box-shadow: 0 0 10px rgba(102,150,250,0.5);
-            }
-
-            /*Button design*/
-            button{
-                width: 100%;
-                margin: 10px 0;
-                padding: 12px;
-                font-size: 16px;
-                border-radius: 10px;
-                border: none;
-                color: white;
-                font-weight: bold;
-                cursor: pointer;
-                transition: 0.3s;
-            }
-
-            /*Button hover effect*/
-            button:hover{
-                transform: scale(1.03);
-                opacity: 0.9;
-            }
-
-            /*Addition button*/
-            .add button{
-                background: #28a745;
-            }
-
-            /*Substraction button*/
-            .sub button{
-                background: #dc3545;
-            }
-
-            /*Multiplication button*/
-            .mul button{
-                background: #007bff;
-            }
-
-            /*Exponentiation button*/
-            .exp button{
-                background: #6f42c1;
-            }
-
-            /*Result Box*/
-            .result{
-                background: #f5f5f5;
-            }
-
-            /*Mobile responsive design*/
-            @media(max-width: 700px){
-                .container{
-                    grid-template-columns: 1fr;
-                }
-                .head{
-                    font-size: 30px;
-                }
-            }
-        </style>
-
-    </head>
+        <link rel="stylesheet" href="simcalc.css">
     
-    <script>
+        <!--Javascript part-->
+        <script>
+            //Addition function
+            function add(){
+                var a,b;
+                a=parseInt(document.getElementById("addOne").value);
+                b=parseInt(document.getElementById("addTwo").value);
+                document.getElementById("readd").value=a+b;
+            }
 
-        //Addition function
-        function add()
-        {
-            var a,b;
-            a=parseInt(document.getElementById("addOne").value);
-            b=parseInt(document.getElementById("addTwo").value);
-            document.getElementById("readd").value=a+b;
-       }
+            //Substraction function
+            function sub(){
+                var a,b;
+                a=parseInt(document.getElementById("subOne").value);
+                b=parseInt(document.getElementById("subTwo").value);
+                document.getElementById("resub").value=a-b;
+            }
 
-       //Substraction function
-       function sub()
-        {
-            var a,b;
-            a=parseInt(document.getElementById("subOne").value);
-            b=parseInt(document.getElementById("subTwo").value);
-            document.getElementById("resub").value=a-b;
-       }
+            //Multiplication function
+            function mul(){
+                var a,b;
+                a=parseInt(document.getElementById("mulOne").value);
+                b=parseInt(document.getElementById("mulTwo").value);
+                document.getElementById("remul").value=a*b;
+            }
 
-       //Multiplication function
-       function mul()
-        {
-            var a,b;
-            a=parseInt(document.getElementById("mulOne").value);
-            b=parseInt(document.getElementById("mulTwo").value);
-            document.getElementById("remul").value=a*b;
-       }
+            //Exponentiation function
+            function exp(){
+                var a,b;
+                a=parseInt(document.getElementById("expOne").value);
+                b=parseInt(document.getElementById("expTwo").value);
+                document.getElementById("reexp").value=a**b;
+            }
 
-       //Exponentiation function
-       function exp()
-        {
-            var a,b;
-            a=parseInt(document.getElementById("expOne").value);
-            b=parseInt(document.getElementById("expTwo").value);
-            document.getElementById("reexp").value=a**b;
-       }
-
-    </script>
+        </script>
+    </head>
 
     <body>
         <!--Main calculator heading-->
