@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--Page title-->
         <title>Addition</title>
 
         <style>
+            /*Box sizing*/
             *{
                 box-sizing: border-box;
             }
 
+            /*Page design*/
             body{
                 margin: 0;
                 padding: 40px 20px;
@@ -16,6 +19,7 @@
                 min-height: 100vh;
             }
 
+            /*Main heading*/
             .head{
                 color: black;
                 margin: 35px;
@@ -23,12 +27,14 @@
                 text-align: center;
             }
 
+            /*Card heading*/
             h1{
                 color: #333;
                 font-size: 24px;
                 margin-bottom: 25px;
             }
 
+            /*Calculator grid*/
             .container{
                 max-width: 900px;
                 margin: auto;
@@ -37,6 +43,7 @@
                 gap: 20px;
             }
 
+            /*Calculator card*/
             .calculating{
                 background-color: white;
                 padding: 30px;
@@ -44,16 +51,19 @@
                 box-shadow: 0 15px 20px rgba(0,0,0,0.2);
             }
 
+            /*Card hover effect*/
             .calculating:hover{
                 transform: translateY(-5px);
                 box-shadow: 0 15px 30px rgba(0,0,0,0.2);
             }
 
+            /*Paragraph text*/
             p{
                 color: #555;
                 font-size: 16px;
             }
 
+            /*Input boxes*/
             input{
                 width: 100%;
                 border: 2px solid #ddd;
@@ -65,11 +75,13 @@
                 transition: 0.5s;
             }
 
+            /*Input hover effect*/
             input:hover{
                 border-color: #6676ee;
                 box-shadow: 0 0 10px rgba(102,150,250,0.5);
             }
 
+            /*Button design*/
             button{
                 width: 100%;
                 margin: 10px 0;
@@ -83,31 +95,38 @@
                 transition: 0.3s;
             }
 
+            /*Button hover effect*/
             button:hover{
                 transform: scale(1.03);
                 opacity: 0.9;
             }
 
+            /*Addition button*/
             .add button{
                 background: #28a745;
             }
 
+            /*Substraction button*/
             .sub button{
                 background: #dc3545;
             }
 
+            /*Multiplication button*/
             .mul button{
                 background: #007bff;
             }
 
+            /*Exponentiation button*/
             .exp button{
                 background: #6f42c1;
             }
 
+            /*Result Box*/
             .result{
                 background: #f5f5f5;
             }
 
+            /*Mobile responsive design*/
             @media(max-width: 700px){
                 .container{
                     grid-template-columns: 1fr;
@@ -121,6 +140,8 @@
     </head>
     
     <script>
+
+        //Addition function
         function add()
         {
             var a,b;
@@ -129,6 +150,7 @@
             document.getElementById("readd").value=a+b;
        }
 
+       //Substraction function
        function sub()
         {
             var a,b;
@@ -137,6 +159,7 @@
             document.getElementById("resub").value=a-b;
        }
 
+       //Multiplication function
        function mul()
         {
             var a,b;
@@ -145,6 +168,7 @@
             document.getElementById("remul").value=a*b;
        }
 
+       //Exponentiation function
        function exp()
         {
             var a,b;
@@ -156,9 +180,13 @@
     </script>
 
     <body>
+        <!--Main calculator heading-->
         <h1 class="head">Simple Calculator</h1>
         
+        <!--Calculator container-->
         <div class="container">
+
+            <!--Addition card-->
             <div class="calculating add">
                 <h1>Addition</h1>
 
@@ -174,6 +202,7 @@
                 <input type="text" id="readd">
             </div>
 
+            <!--Substraction card-->
             <div class="calculating sub">
                 <h1>Substraction</h1>
 
@@ -189,6 +218,7 @@
                 <input type="text" id="resub">
             </div>
 
+            <!--Multiplication card-->
             <div class="calculating mul">
                 <h1>Multiplication</h1>
 
@@ -204,6 +234,7 @@
                 <input type="text" id="remul">
             </div>
 
+            <!--Exponentiation card-->
             <div class="calculating exp">
                 <h1>Exponentiation</h1>
 
