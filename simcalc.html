@@ -2,6 +2,33 @@
 <html>
     <head>
         <title>Addition</title>
+
+        <style>
+            *{
+                box-sizing: border-box;
+            }
+
+            body{
+                margin: 0;
+                padding: 40px 20px;
+                background: linear-gradient(lightblure);
+                font-family: Arial, Helvetica, sans-serif;
+                min-height: 100vh;
+            }
+
+            .head{
+                color: black;
+                margin: 35px;
+                font-size: 40px;
+                text-align: center;
+            }
+
+            h1{
+                color: #333;
+                font-size: 24px;
+                margin-bottom: 25px;
+            }
+        </style>
     </head>
     
     <script>
@@ -40,64 +67,68 @@
     </script>
 
     <body>
-        <div>
-            <h1>This section is to add two numbers</h1>
+        <h1 class="head">Simple Calculator</h1>
+        
+        <div class="container">
+            <div class="calculating add">
+                <h1>This section is to add two numbers</h1>
 
-            <p>Enter First Number:
-            <input type="text" id="addOne"></p>
+                <p>Enter First Number:
+                <input type="text" id="addOne"></p>
 
-            <p>Enter Second Number:
-            <input type="text" id="addTwo"></p>
+                <p>Enter Second Number:
+                <input type="text" id="addTwo"></p>
 
-            <button onclick="add()">Add</button>
+                <button onclick="add()">Add</button>
 
-            <p>Result of Add:
-            <input type="text" id="readd"></p>
-        </div>
+                <p>Result of Add:
+                <input type="text" id="readd"></p>
+            </div>
 
-        <div>
-            <h1>This section is to sub two numbers</h1>
+            <div class="calculating sub">
+                <h1>This section is to sub two numbers</h1>
 
-            <p>Enter First Number:
-            <input type="text" id="subOne"></p>
+                <p>Enter First Number:
+                <input type="text" id="subOne"></p>
 
-            <p>Enter Second Number:
-            <input type="text" id="subTwo"></p>
+                <p>Enter Second Number:
+                <input type="text" id="subTwo"></p>
 
-            <button onclick="sub()">Sub</button>
+                <button onclick="sub()">Sub</button>
 
-            <p>Result of Sub:
-            <input type="text" id="resub"></p>
-        </div>
+                <p>Result of Sub:
+                <input type="text" id="resub"></p>
+            </div>
 
-        <div>
-            <h1>This section is to add two numbers</h1>
+            <div class="calculating mul">
+                <h1>This section is to add two numbers</h1>
 
-            <p>Enter First Number:
-            <input type="text" id="mulOne"></p>
+                <p>Enter First Number:
+                <input type="text" id="mulOne"></p>
 
-            <p>Enter Second Number:
-            <input type="text" id="mulTwo"></p>
+                <p>Enter Second Number:
+                <input type="text" id="mulTwo"></p>
 
-            <button onclick="mul()">Mul</button>
+                <button onclick="mul()">Mul</button>
 
-            <p>Result of Mul:
-            <input type="text" id="remul"></p>
-        </div>
+                <p>Result of Mul:
+                <input type="text" id="remul"></p>
+            </div>
 
-        <div>
-            <h1>This section is to add two numbers</h1>
+            <div class="calculating exp">
+                <h1>This section is to add two numbers</h1>
 
-            <p>Enter First Number:
-            <input type="text" id="expOne"></p>
+                <p>Enter First Number:
+                <input type="text" id="expOne"></p>
 
-            <p>Enter Second Number:
-            <input type="text" id="expTwo"></p>
+                <p>Enter Second Number:
+                <input type="text" id="expTwo"></p>
 
-            <button onclick="exp()">Exp</button>
+                <button onclick="exp()">Exp</button>
 
-            <p>Result of Exp:
-            <input type="text" id="reexp"></p>
+                <p>Result of Exp:
+                <input type="text" id="reexp"></p>
+            </div>
         </div>
     </body>
 </html>
