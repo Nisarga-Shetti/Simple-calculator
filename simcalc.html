@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Addition</title>
+    </head>
+    
+    <script>
+        function add()
+        {
+            var a,b;
+            a=parseInt(document.getElementById("addOne").value);
+            b=parseInt(document.getElementById("addTwo").value);
+            document.getElementById("readd").value=a+b;
+       }
+
+       function sub()
+        {
+            var a,b;
+            a=parseInt(document.getElementById("subOne").value);
+            b=parseInt(document.getElementById("subTwo").value);
+            document.getElementById("resub").value=a-b;
+       }
+
+       function mul()
+        {
+            var a,b;
+            a=parseInt(document.getElementById("mulOne").value);
+            b=parseInt(document.getElementById("mulTwo").value);
+            document.getElementById("remul").value=a*b;
+       }
+
+       function exp()
+        {
+            var a,b;
+            a=parseInt(document.getElementById("expOne").value);
+            b=parseInt(document.getElementById("expTwo").value);
+            document.getElementById("reexp").value=a**b;
+       }
+
+    </script>
+
+    <body>
+        <div>
+            <h1>This section is to add two numbers</h1>
+
+            <p>Enter First Number:
+            <input type="text" id="addOne"></p>
+
+            <p>Enter Second Number:
+            <input type="text" id="addTwo"></p>
+
+            <button onclick="add()">Add</button>
+
+            <p>Result of Add:
+            <input type="text" id="readd"></p>
+        </div>
+
+        <div>
+            <h1>This section is to sub two numbers</h1>
+
+            <p>Enter First Number:
+            <input type="text" id="subOne"></p>
+
+            <p>Enter Second Number:
+            <input type="text" id="subTwo"></p>
+
+            <button onclick="sub()">Sub</button>
+
+            <p>Result of Sub:
+            <input type="text" id="resub"></p>
+        </div>
+
+        <div>
+            <h1>This section is to add two numbers</h1>
+
+            <p>Enter First Number:
+            <input type="text" id="mulOne"></p>
+
+            <p>Enter Second Number:
+            <input type="text" id="mulTwo"></p>
+
+            <button onclick="mul()">Mul</button>
+
+            <p>Result of Mul:
+            <input type="text" id="remul"></p>
+        </div>
+
+        <div>
+            <h1>This section is to add two numbers</h1>
+
+            <p>Enter First Number:
+            <input type="text" id="expOne"></p>
+
+            <p>Enter Second Number:
+            <input type="text" id="expTwo"></p>
+
+            <button onclick="exp()">Exp</button>
+
+            <p>Result of Exp:
+            <input type="text" id="reexp"></p>
+        </div>
+    </body>
+</html>
